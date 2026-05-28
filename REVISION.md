@@ -1,5 +1,30 @@
 # Revision History
 
+## 2026-05-28, v1 live
+
+### What changed
+
+jasonrundle.io is live in production. Vercel project linked to the GitHub repo, Namecheap A record on `@` → `216.198.79.1`, Namecheap CNAME on `www` → project-specific Vercel endpoint (`c5d41582a36e806f.vercel-dns-017.com`), Namecheap default URL-redirect parking record on `@` deleted. Canonical is apex (`jasonrundle.io`). `www.jasonrundle.io` and `jasonrundle-io.vercel.app` both 308-redirect to the apex. Vercel Deployment Protection disabled so the public surface is actually public.
+
+### Why apex as canonical
+
+Apex is shorter, modern convention (Linear / Vercel / Stripe), matches Latent Mind's pattern. 308 instead of 307 because the redirect is permanent: crawlers transfer link equity and clients can cache it.
+
+### Verified
+
+- `https://jasonrundle.io` loads. All sections present (header, summary, Experience, Selected Projects, Qualifications). Placeholder content as expected.
+- `https://www.jasonrundle.io` resolves to the same page content (308 to apex).
+- `https://jasonrundle.io/jason-rundle-resume.pdf` serves a valid PDF (PDF 1.3, title "Jason Rundle", author "Jason Rundle", 4.6 KB, 3 link annotations).
+
+### Not done
+
+- Real content. Placeholder until curated export lands.
+- Contact link hrefs. Email, LinkedIn, GitHub all still `#`. Email forwarding (jason@jasonrundle.io → jkrundle@protonmail.com) is set up at Namecheap, so the contact href is decidable when we do the content drop.
+- v2 (Supabase + projects browse). v3 (chat).
+- DKIM TXT record. SPF is in (`v=spf1 include:spf.efwd.registrar-servers.com ~all`). DKIM was mentioned as configured but wasn't visible in the Namecheap Advanced DNS panel screenshot. Worth a separate confirmation that forwarded mail is landing in Protonmail's inbox and not spam.
+
+---
+
 ## 2026-05-28, infrastructure setup
 
 ### What changed

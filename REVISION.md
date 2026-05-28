@@ -1,5 +1,48 @@
 # Revision History
 
+## 2026-05-28, infrastructure setup
+
+### What changed
+
+Public GitHub repo created at `github.com/rebootexperts/jasonrundle.io`, pushed all v1 scaffold commits. Vercel project, DNS records, and email forwarding handed off to Jason for manual completion (instructions captured below for the next time we have to redo this).
+
+### Why
+
+**Public repo.** Nothing sensitive in the codebase. The codebase itself is part of the candidate-selling signal: "here is the site, and the code behind it, both of which are unembarrassed by being looked at." Same reasoning that makes Vercel preview URLs shareable later.
+
+**`rebootexperts` account.** Matches the established pattern. Latent Mind also lives at `github.com/rebootexperts/latentmind`. Keeps Jason's projects under one identity.
+
+**Repo named `jasonrundle.io` rather than `jasonrundle`.** The site is the artifact, not the person. Including the TLD reads as "the site" and avoids the repo looking like a personal-name slug. Slight divergence from the `latentmind` (no `.io`) pattern. The Latent Mind name was a project name that happens to also be a domain; this project's name *is* the domain.
+
+### Hand-off plan (Vercel, DNS, email)
+
+**Vercel project**
+1. vercel.com/new
+2. Import `rebootexperts/jasonrundle.io`
+3. Framework: Next.js (auto-detected). Root, build, install, output: all defaults.
+4. No environment variables in v1.
+5. Deploy.
+
+After the first deploy, Project Settings → Domains: add `jasonrundle.io` (production) and `www.jasonrundle.io` (optional, www → apex redirect). Vercel will surface the exact A and CNAME records to set at Namecheap.
+
+**Namecheap DNS** (typical Vercel pattern, defer to whatever the Vercel dashboard surfaces)
+- A record on `@` → 76.76.21.21
+- CNAME on `www` → cname.vercel-dns.com
+
+**Email** (Namecheap forwarding → Protonmail)
+- jason@jasonrundle.io → jkrundle@protonmail.com via Namecheap email forwarding
+- MX records (Namecheap's mail servers) + SPF + DKIM TXT records
+- Same pattern Jason has on latentmind.io and punkflow.io
+
+The Vercel records (A + CNAME) and the email forwarding records (MX + TXT) coexist at Namecheap, since Namecheap stays authoritative for the zone. Nameservers do not change.
+
+### Not done
+
+- The Vercel + DNS + email setup itself. Jason is doing those manually.
+- Once Vercel deploy is live and the domain is wired, REVISION.md should get a "verified" follow-up noting the production URL.
+
+---
+
 ## 2026-05-28, v1 scaffold
 
 ### What changed

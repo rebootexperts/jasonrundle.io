@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "tsx scripts/generate-pdf.ts && next build",
+    "build": "tsx scripts/generate-pdf.tsx && next build",
     "start": "next start",
     "lint": "eslint",
-    "pdf": "tsx scripts/generate-pdf.ts"
+    "pdf": "tsx scripts/generate-pdf.tsx"
   },
   "dependencies": {
     "@react-pdf/renderer": "^4.3.0",

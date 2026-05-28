@@ -38,5 +38,8 @@ yarn-error.log*
 # TypeScript
 *.tsbuildinfo
 
+# Generated PDF (rebuilt on `npm run build` or `npm run pdf`)
+/public/jason-rundle-resume.pdf
+
 # Claude Code session data
 .claude/

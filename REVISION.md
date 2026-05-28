@@ -12,6 +12,18 @@ Single resume page at `/`, content sourced from `src/data/resume.ts` (typed plac
 
 v1 of the resume site. DoD: traditional resume view live at jasonrundle.io with the PDF download working. Projects browse and conversational AI deferred to v2 and v3.
 
+### Design rationale
+
+**Lane: modern product-doc.** Picked over editorial/typographic (too dated unless the type pairing is perfect) and terminal/engineering (pigeonholes as IC engineer, narrower than the role Jason is positioning for). Modern product-doc reads like Linear / Vercel / Stripe, but carries the "looks like every well-designed SaaS site" risk. The three deliberate non-default choices below counter that.
+
+**Type: Mona Sans + Geist Mono.** Inter and Geist Sans are the SaaS defaults and produce instantly-generic pages. Mona Sans (GitHub's open type, free) is well-drawn, has real personality at display weights, and isn't on every tech site. Geist Mono is reserved for structural type only: section labels, dates, scope, tech in the metadata rail. The mono accents add texture without going full terminal.
+
+**Accent: burnt sienna (#b45309).** Warm, not blue, not Linear-purple. Reads "considered" rather than "tech." Editorial register without being literally serif. Used sparingly on section labels, bullet dots, hover states. Not on backgrounds or large surfaces, since that would tip the page from "tasteful" into "branded."
+
+**Layout signature: right-margin metadata rail on each entry.** Prose on the left (title, company, summary, highlights), thin rail on the right (dates, location, scope, tech in small-caps mono). On mobile the rail collapses inline below the entry. Skim reads the rail as an at-a-glance summary; close-read follows the prose as narrative. Tufte-adjacent, rare on resume sites. This is the load-bearing personalization move; the type and color choices reinforce it.
+
+**Scope discipline.** No section taxonomy, no status workflow, no `entry_versions`, no wikilinks, no animation library. Flat typed data and a single page. The resume corpus is small enough that more architecture is debt, not flexibility. Patterns from Latent Mind get borrowed where they fit (OpenRouter, embed-via-trigger, hybrid search) and dropped where they don't (the whole knowledge-base taxonomy).
+
 ### Verified
 
 - `npm run build` runs the PDF generation script first and then `next build`. Both complete cleanly. PDF written to `/public/jason-rundle-resume.pdf` (1 page, ~4.7 KB). Next compiled 3 static pages, no errors.

@@ -1,5 +1,83 @@
 # Revision History
 
+## 2026-05-28, content and privacy guidelines for resume content
+
+### What changed
+
+Captured the rules that govern what goes on the resume site (web and PDF). Rules now live in two places:
+
+1. **Header comment** at the top of `src/data/resume.ts`. Visible to anyone editing the file (human or Claude) before they touch a line of content.
+2. **This entry**, as the long-form reference.
+
+Placeholder content in `src/data/resume.ts` reworked to model the right shape:
+
+- Highlights now show the concrete-public-outcome pattern (`"Built [specific shipped thing] that [concrete public-facing outcome]"`, `"Reduced [public-facing metric] from [X] to [Y]"`) instead of the previous abstract "placeholder thing X drove placeholder outcome Y."
+- The previous-role highlight "Placeholder previous-role achievement" became "Shipped [public-facing thing]" and "Owned [publicly-stated area of responsibility]."
+- The `scope` field on the current-role placeholder dropped the "team size, ARR, users" hint (ARR is a revenue figure, exactly the kind of internal metric the guidelines flag for review) and now reads as a public-facing scope statement.
+- The "operating under placeholder constraint" phrasing was removed; it modeled the implicit-criticism-of-employer pattern the tone guideline calls out.
+- Location placeholder is now "TBD City, TBD State" with an inline comment reinforcing the no-street-address rule.
+- Contact link placeholders for LinkedIn and GitHub now say "TBD URL" instead of "TBD handle" (the rule is full URLs).
+- Email contact still `href="#"` and `display: "TBD email"` until end-to-end verification of the Namecheap → Protonmail forwarding confirms mail lands in inbox.
+
+`src/types/resume.ts`: `Profile` gained a JSDoc noting the deliberate field exclusions (phone, street address, DOB, age, marital status, photo). The `location` property got a JSDoc making the city+state-only rule visible from the type.
+
+### The rules (long form)
+
+**Personal contact information**
+
+Goes on the site (web and PDF):
+- Name
+- Location: city and state/region only (e.g., "Based in [City], [State]"). No street address.
+- Email: jason@jasonrundle.io (once forwarding is verified end-to-end)
+- LinkedIn: full URL
+- GitHub: full URL
+
+Does not go on the site:
+- Phone number. Recruiters who need it will ask.
+- Home address.
+- Date of birth, age, marital status, photo (ask before adding a photo).
+
+**Information about companies and roles**
+
+Fine to include:
+- Company names, job titles, date ranges, general scope of role.
+- Team sizes, reporting structure at a high level.
+- Publicly known projects, products, or initiatives.
+- Metrics and achievements that have been publicly shared by the company or by Jason elsewhere (LinkedIn posts, conference talks, etc.).
+- Skills, technologies, methodologies used.
+
+Flag for review:
+- Specific internal metrics (revenue figures, headcount changes, internal KPIs).
+- Customer names not publicly disclosed.
+- Internal product codenames or unreleased products.
+- References to specific internal events, incidents, or restructurings.
+- Anything that might be covered by an NDA or confidentiality agreement.
+
+The test: would the head of communications at the former (or current) employer say "fine, that's public knowledge"? If not, flag it.
+
+**Tone**
+
+Neutral and forward-looking. No implicit criticism of past or current employers ("despite organizational constraints" is out, even if true). Achievement-oriented framing: what was built, shipped, improved, or learned. Concrete over vague: "Reduced deployment time from 2 hours to 15 minutes" over "Improved deployment processes."
+
+**PDF and web equivalence**
+
+The downloadable PDF contains the same information as the web version. The PDF is not "more private" or "for serious recruiters only." Anyone can download it. If something isn't safe for the public web, it isn't safe for the PDF.
+
+**Current employer (Reboot Experts)**
+
+Extra care. The consequences of a misstep are most immediate. Generic role description and publicly known projects only. When in doubt, less is more.
+
+### Why
+
+Content drop is next. Before real content lands, the rules need to be visible to whoever (or whatever) is writing it. Putting them in a file header rather than only in REVISION.md means the next time anyone opens `src/data/resume.ts` to edit content, the rules are right there.
+
+### Not done
+
+- Real content. Placeholder content still in place, awaiting curated export.
+- Email href update. Email forwarding is set up but waiting on end-to-end inbox verification before flipping `href="#"` to `href="mailto:jason@jasonrundle.io"`.
+
+---
+
 ## 2026-05-28, v1 live
 
 ### What changed

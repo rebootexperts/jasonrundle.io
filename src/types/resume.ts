@@ -5,9 +5,14 @@ export type ResumeData = {
   qualifications: Qualification[];
 };
 
+/**
+ * Resume profile. Excludes phone, street address, DOB, age, marital status,
+ * and photo by design. See src/data/resume.ts header for full content guidelines.
+ */
 export type Profile = {
   name: string;
   headline: string;
+  /** City + state/region only. Never a street address. */
   location: string;
   summary: string;
   contact: ContactLink[];

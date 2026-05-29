@@ -59,7 +59,7 @@ export const resume: ResumeData = {
         "Built a custom Microsoft Copilot agent for operational decisions, technician coaching, and communications drafting; now part of daily team workflow.",
         "Authored the team's operating framework (Backbone Guide and Lead Landmines), covering ServiceNow, Email, Teams, and SharePoint, with signal hierarchy and project tracking standards.",
         "Drive knowledge base and documentation strategy across 12 functional areas spanning walk-up support, executive support, inventory operations, and the monthly guest Wi-Fi rotation across 20 digital displays.",
-        "Established cross-region Lead coverage for Canadian Deskside operations in a hybrid Deskside/Field Services environment; defined scope, escalation paths, and hardware procurement model. Direct two specialists and mentor the broader team.",
+        "Established cross-region Lead coverage for Canadian Deskside operations in a hybrid Deskside/Field Services environment; defined scope, escalation paths, and hardware procurement model. Mentor the broader team.",
         "Own executive support: hardware standards, executive spare pool, board-meeting readiness, and C-suite priority handling.",
         "Built ServiceNow team-level reporting for Service Operations Workspace and 15+ flow automations for recurring tasks (executive spare health checks, loaner pool inspections, conference room equipment checks, asset ordering).",
         "Coordinate vendor renewals across conference room AV, the room scheduling platform, a 40-license workspace booking migration, and the Hardware Asset Management implementation partner.",
@@ -68,7 +68,7 @@ export const resume: ResumeData = {
         "Trained 50+ staff on Surface Hub usage across multiple sessions using team-developed materials.",
         "Led return-to-work coordination for two organizations (SSA and Tideworks); shifted team coaching model from manual ticket review to stats-driven as scope expanded.",
       ],
-      scope: "HQ + multi-site Canadian Deskside. Two direct reports.",
+      scope: "HQ + 4 Canadian sites. Lead to 2 HQ specialists and 4 Canadian site technicians.",
       tech: ["ServiceNow", "Microsoft 365", "Microsoft Copilot", "Jamf", "Teams Rooms"],
     },
     {

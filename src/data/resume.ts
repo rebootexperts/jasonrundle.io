@@ -31,14 +31,16 @@ export const resume: ResumeData = {
     name: "Jason Rundle",
     // Scannable role/scope line. Not a marketing tagline.
     headline: "Lead Technical Support Specialist · IT Operations · AI Tooling for Team Workflows",
-    location: "TBD City, TBD State", // city + state only, never a street address
+    location: "Tacoma, WA", // city + state only, never a street address
     summary:
       "IT operations professional with 25+ years across enterprise help desk, deskside support leadership, and small-business IT consulting. Currently leading deskside operations at Carrix, with operational ownership of asset management, vendor relationships, and AI-driven team tooling. Active builder of AI-powered systems and side projects in parallel with day work.",
     contact: [
       { label: "Email", href: "mailto:jason@jasonrundle.io", display: "jason@jasonrundle.io" },
-      // LinkedIn and GitHub: full URLs, not bare handles.
-      { label: "LinkedIn", href: "#", display: "TBD URL" },
-      { label: "GitHub", href: "#", display: "TBD URL" },
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/jason-rundle-0210b153",
+        display: "linkedin.com/in/jason-rundle-0210b153",
+      },
     ],
   },
 
@@ -47,7 +49,7 @@ export const resume: ResumeData = {
       id: "carrix",
       title: "Lead Technical Support Specialist, Deskside",
       company: "Carrix",
-      location: "TBD",
+      location: "Seattle, WA (Hybrid)",
       startDate: "2021-06",
       endDate: null,
       summary:

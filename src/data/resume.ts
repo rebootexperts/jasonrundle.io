@@ -84,9 +84,9 @@ export const resume: ResumeData = {
       highlights: [],
     },
     {
-      id: "rewind-yourself",
+      id: "run-films",
       title: "Owner/Operator",
-      company: "ReWind YourSelf / Run Films",
+      company: "Run Films",
       startDate: "1998-01",
       endDate: "2019-11",
       summary:

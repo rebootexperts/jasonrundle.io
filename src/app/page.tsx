@@ -4,7 +4,9 @@ import { ResumeHeader } from "@/components/resume/ResumeHeader";
 import { Summary } from "@/components/resume/Summary";
 import { ExperienceSection } from "@/components/resume/ExperienceSection";
 import { ProjectsSection } from "@/components/resume/ProjectsSection";
-import { QualificationsSection } from "@/components/resume/QualificationsSection";
+import { CertificationsSection } from "@/components/resume/CertificationsSection";
+import { EducationSection } from "@/components/resume/EducationSection";
+import { SkillsSection } from "@/components/resume/SkillsSection";
 
 export const metadata: Metadata = {
   title: `${resume.profile.name}`,
@@ -18,7 +20,9 @@ export default function Home() {
       <Summary text={resume.profile.summary} />
       <ExperienceSection experiences={resume.experiences} />
       <ProjectsSection projects={resume.projects} />
-      <QualificationsSection qualifications={resume.qualifications} />
+      <CertificationsSection certifications={resume.certifications} />
+      <EducationSection entries={resume.education} />
+      <SkillsSection categories={resume.skills} />
     </main>
   );
 }

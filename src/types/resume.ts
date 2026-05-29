@@ -2,7 +2,9 @@ export type ResumeData = {
   profile: Profile;
   experiences: Experience[];
   projects: Project[];
-  qualifications: Qualification[];
+  certifications: Certification[];
+  education: Education[];
+  skills: SkillCategory[];
 };
 
 /**
@@ -11,6 +13,7 @@ export type ResumeData = {
  */
 export type Profile = {
   name: string;
+  /** Scannable role/scope line, not a marketing tagline. */
   headline: string;
   /** City + state/region only. Never a street address. */
   location: string;
@@ -30,7 +33,9 @@ export type Experience = {
   company: string;
   companyUrl?: string;
   location?: string;
+  /** "YYYY-MM" or "YYYY". */
   startDate: string;
+  /** "YYYY-MM" or "YYYY", or null for present. */
   endDate: string | null;
   summary: string;
   highlights: string[];
@@ -47,11 +52,23 @@ export type Project = {
   tech?: string[];
 };
 
-export type Qualification = {
+export type SkillCategory = {
   id: string;
-  kind: "education" | "certification" | "skill" | "other";
-  title: string;
-  institution?: string;
+  /** Category label (e.g., "Endpoint and Device Management"). */
+  name: string;
+  /** Ordered list of items within the category. Order signals relevance. */
+  items: string[];
+};
+
+export type Certification = {
+  id: string;
+  name: string;
+  issuer?: string;
   year?: string;
-  detail?: string;
+};
+
+export type Education = {
+  id: string;
+  /** Free-text statement. Used for non-traditional framings (e.g., "Experience-based. No formal degree."). */
+  statement: string;
 };

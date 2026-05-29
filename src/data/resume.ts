@@ -29,7 +29,8 @@ import type { ResumeData } from "@/types/resume";
 export const resume: ResumeData = {
   profile: {
     name: "Jason Rundle",
-    headline: "Placeholder headline. Real positioning lands when curated content arrives.",
+    // Scannable role/scope line. Format: role | scope | distinctive thread.
+    headline: "Placeholder headline. Role | scope | distinctive thread.",
     location: "TBD City, TBD State", // city + state only, never a street address
     summary:
       "Placeholder summary. Two or three neutral, forward-looking sentences introducing Jason and the work he does. No commentary on past or current employer dynamics.",
@@ -91,19 +92,26 @@ export const resume: ResumeData = {
     },
   ],
 
-  qualifications: [
+  certifications: [
     {
-      id: "education-placeholder",
-      kind: "education",
-      title: "Placeholder Degree",
-      institution: "Placeholder University",
+      id: "placeholder-cert",
+      name: "Placeholder Certification",
       year: "20XX",
     },
+  ],
+
+  education: [
     {
-      id: "skill-placeholder",
-      kind: "skill",
-      title: "Placeholder skill cluster",
-      detail: "Public-facing skills, no internal-tool name-drops.",
+      id: "placeholder-edu",
+      statement: "Placeholder education statement. Honest framing, no padding.",
+    },
+  ],
+
+  skills: [
+    {
+      id: "placeholder-skill-category",
+      name: "Placeholder Skill Category",
+      items: ["Placeholder item 1", "Placeholder item 2", "Placeholder item 3"],
     },
   ],
 };

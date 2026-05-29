@@ -13,7 +13,9 @@ import type {
   Profile,
   Experience,
   Project,
-  Qualification,
+  Certification,
+  Education,
+  SkillCategory,
 } from "@/types/resume";
 
 const ACCENT = "#b45309";
@@ -131,7 +133,7 @@ const styles = StyleSheet.create({
 });
 
 export function ResumePdf({ data }: { data: ResumeData }) {
-  const { profile, experiences, projects, qualifications } = data;
+  const { profile, experiences, projects, certifications, education, skills } = data;
   return (
     <Document title={profile.name} author={profile.name}>
       <Page size="LETTER" style={styles.page}>
@@ -156,10 +158,24 @@ export function ResumePdf({ data }: { data: ResumeData }) {
           </>
         )}
 
-        {qualifications.length > 0 && (
+        {certifications.length > 0 && (
           <>
-            <Text style={styles.sectionHeading}>Qualifications</Text>
-            <QualificationsBlock items={qualifications} />
+            <Text style={styles.sectionHeading}>Certifications</Text>
+            <CertificationsBlock items={certifications} />
+          </>
+        )}
+
+        {education.length > 0 && (
+          <>
+            <Text style={styles.sectionHeading}>Education</Text>
+            <EducationBlock items={education} />
+          </>
+        )}
+
+        {skills.length > 0 && (
+          <>
+            <Text style={styles.sectionHeading}>Skills</Text>
+            <SkillsBlock items={skills} />
           </>
         )}
       </Page>
@@ -240,52 +256,53 @@ function ProjectEntry({ project }: { project: Project }) {
   );
 }
 
-const KIND_LABEL: Record<Qualification["kind"], string> = {
-  education: "Education",
-  certification: "Certifications",
-  skill: "Skills",
-  other: "Other",
-};
-
-const KIND_ORDER: Qualification["kind"][] = [
-  "education",
-  "certification",
-  "skill",
-  "other",
-];
-
-function QualificationsBlock({ items }: { items: Qualification[] }) {
-  const groups = KIND_ORDER.map((kind) => ({
-    kind,
-    items: items.filter((q) => q.kind === kind),
-  })).filter((g) => g.items.length > 0);
-
+function CertificationsBlock({ items }: { items: Certification[] }) {
   return (
     <View>
-      {groups.map((g) => (
-        <View key={g.kind} style={styles.entryRow} wrap={false}>
+      {items.map((c) => (
+        <View key={c.id} style={styles.entryRow} wrap={false}>
           <View style={styles.entryProse}>
-            {g.items.map((q) => (
-              <View key={q.id} style={{ marginBottom: 6 }}>
-                <Text style={{ fontSize: 10.5, color: TEXT }}>
-                  <Text style={{ fontFamily: "Helvetica-Bold" }}>{q.title}</Text>
-                  {q.institution && <Text style={{ color: TEXT_MUTED }}>{`, ${q.institution}`}</Text>}
-                  {q.year && (
-                    <Text style={{ fontFamily: "Courier", fontSize: 7.5, color: TEXT_META, textTransform: "uppercase", letterSpacing: 0.6 }}>
-                      {` · ${q.year}`}
-                    </Text>
-                  )}
-                </Text>
-                {q.detail && (
-                  <Text style={{ fontSize: 9.5, color: TEXT_MUTED, marginTop: 2, lineHeight: 1.55 }}>
-                    {q.detail}
-                  </Text>
-                )}
-              </View>
-            ))}
+            <Text style={{ fontSize: 10.5, color: TEXT }}>
+              <Text style={{ fontFamily: "Helvetica-Bold" }}>{c.name}</Text>
+              {c.issuer && <Text style={{ color: TEXT_MUTED }}>{`, ${c.issuer}`}</Text>}
+            </Text>
           </View>
           <View style={styles.entryMeta}>
-            <Text style={styles.metaText}>{KIND_LABEL[g.kind]}</Text>
+            <Text style={styles.metaText}>{c.year ?? ""}</Text>
+          </View>
+        </View>
+      ))}
+    </View>
+  );
+}
+
+function EducationBlock({ items }: { items: Education[] }) {
+  return (
+    <View>
+      {items.map((e) => (
+        <Text
+          key={e.id}
+          style={{ fontSize: 10.5, color: TEXT_MUTED, marginBottom: 4, lineHeight: 1.55 }}
+        >
+          {e.statement}
+        </Text>
+      ))}
+    </View>
+  );
+}
+
+function SkillsBlock({ items }: { items: SkillCategory[] }) {
+  return (
+    <View>
+      {items.map((s) => (
+        <View key={s.id} style={styles.entryRow} wrap={false}>
+          <View style={styles.entryProse}>
+            <Text style={{ fontSize: 10, color: TEXT_MUTED, lineHeight: 1.55 }}>
+              {s.items.join(" · ")}
+            </Text>
+          </View>
+          <View style={styles.entryMeta}>
+            <Text style={styles.metaText}>{s.name}</Text>
           </View>
         </View>
       ))}

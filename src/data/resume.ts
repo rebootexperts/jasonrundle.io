@@ -73,20 +73,25 @@ export const resume: ResumeData = {
       tech: ["ServiceNow", "Microsoft 365", "Microsoft Copilot", "Jamf", "Teams Rooms"],
     },
     {
-      id: "placeholder-previous",
-      title: "Previous Placeholder Role",
-      company: "Previous Placeholder Company",
-      location: "City, State",
-      startDate: "2021-03",
-      endDate: "2023-12",
+      id: "sound-remodeling",
+      title: "Owner/Operator",
+      company: "Sound Remodeling",
+      location: "Tacoma, WA",
+      startDate: "2019-11",
+      endDate: "2021-06",
       summary:
-        "One neutral sentence framing the previous role.",
-      highlights: [
-        "Shipped [specific public-facing thing].",
-        "Owned [publicly-stated area of responsibility].",
-      ],
-      scope: "Brief scope statement",
-      tech: ["Python", "React", "AWS"],
+        "Ran a home remodeling business in Tacoma, frequently collaborating with Puget Sound Contractor on larger projects. Continued IT consulting at reduced volume through the business.",
+      highlights: [],
+    },
+    {
+      id: "rewind-yourself",
+      title: "Owner/Operator",
+      company: "ReWind YourSelf / Run Films",
+      startDate: "1998-01",
+      endDate: "2019-11",
+      summary:
+        "21-year independent IT and AV consulting business run in parallel with full-time day jobs. Scope spanned network and server hardware/software install and admin, LAN/WAN/VPN configuration, A/V production support, and remote and on-site technical support for small business clients.",
+      highlights: [],
     },
   ],
 

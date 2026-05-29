@@ -53,7 +53,7 @@ export const resume: ResumeData = {
       startDate: "2021-06",
       endDate: null,
       summary:
-        "Lead deskside support operations within Carrix IT, covering HQ and the multiple Canadian site technicians. Scope spans asset management, vendor relationships, ServiceNow workflow design, and AI tooling for team operations.",
+        "Lead deskside support operations within Carrix IT, covering HQ and the multiple Canadian site specialists. Scope spans asset management, vendor relationships, ServiceNow workflow design, and AI tooling for team operations.",
       highlights: [
         "Lead North America for the Hardware Asset Management Phase 0/1 initiative. Authored discovery documents and led the vendor reverse-demo with the ServiceNow implementation partner. Defined the program's central objective: reliably answer who has what device organization-wide.",
         "Built a custom Microsoft Copilot agent for operational decisions, technician coaching, and communications drafting; now part of daily team workflow.",

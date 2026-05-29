@@ -179,24 +179,91 @@ export const resume: ResumeData = {
 
   certifications: [
     {
-      id: "placeholder-cert",
-      name: "Placeholder Certification",
-      year: "20XX",
+      id: "itil",
+      name: "ITIL Certified",
+      year: "2025",
+    },
+    {
+      id: "acmt-2013",
+      name: "Apple Certified Macintosh Technician",
+      year: "2013",
     },
   ],
 
   education: [
     {
-      id: "placeholder-edu",
-      statement: "Placeholder education statement. Honest framing, no padding.",
+      id: "experience-based",
+      statement:
+        "Experience-based. 25+ years in IT across enterprise, retail, public sector, and independent consulting.",
     },
   ],
 
   skills: [
     {
-      id: "placeholder-skill-category",
-      name: "Placeholder Skill Category",
-      items: ["Placeholder item 1", "Placeholder item 2", "Placeholder item 3"],
+      id: "endpoint-device-mgmt",
+      name: "Endpoint and Device Management",
+      items: ["Jamf", "Intune", "Autopilot", "Microsoft Endpoint Manager"],
+    },
+    {
+      id: "service-management",
+      name: "Service Management",
+      items: ["ServiceNow (flows, reporting, asset lifecycle)", "ITIL"],
+    },
+    {
+      id: "productivity-collaboration",
+      name: "Productivity and Collaboration",
+      items: [
+        "Microsoft 365 administration",
+        "Microsoft Teams",
+        "SharePoint",
+        "Google Workspace (small-business tenant admin)",
+      ],
+    },
+    {
+      id: "identity-access",
+      name: "Identity and Access",
+      items: ["Entra ID", "SSO", "MFA", "conditional access fundamentals"],
+    },
+    {
+      id: "operating-systems",
+      name: "Operating Systems",
+      items: [
+        "Windows",
+        "macOS (including Jamf-managed environments)",
+        "iOS",
+        "Android",
+      ],
+    },
+    {
+      id: "hardware",
+      name: "Hardware",
+      items: [
+        "Dell",
+        "HP",
+        "Microsoft Surface platforms",
+        "AV equipment (Teams Rooms, Surface Hub, conference room systems)",
+      ],
+    },
+    {
+      id: "ai-automation",
+      name: "AI and Automation",
+      items: [
+        "Custom Microsoft Copilot agents",
+        "Claude (Claude Code, Claude.ai)",
+        "ServiceNow flow automation",
+        "prompt engineering",
+        "iterative development with AI coding assistants",
+      ],
+    },
+    {
+      id: "documentation",
+      name: "Documentation",
+      items: [
+        "Knowledge base development",
+        "technical writing",
+        "training material development",
+        "instructional design",
+      ],
     },
   ],
 };

@@ -29,16 +29,13 @@ import type { ResumeData } from "@/types/resume";
 export const resume: ResumeData = {
   profile: {
     name: "Jason Rundle",
-    // Scannable role/scope line. Format: role | scope | distinctive thread.
-    headline: "Placeholder headline. Role | scope | distinctive thread.",
+    // Scannable role/scope line. Not a marketing tagline.
+    headline: "Lead Technical Support Specialist · IT Operations · AI Tooling for Team Workflows",
     location: "TBD City, TBD State", // city + state only, never a street address
     summary:
-      "Placeholder summary. Two or three neutral, forward-looking sentences introducing Jason and the work he does. No commentary on past or current employer dynamics.",
+      "IT operations professional with 25+ years across enterprise help desk, deskside support leadership, and small-business IT consulting. Currently leading deskside operations at Carrix, with operational ownership of asset management, vendor relationships, and AI-driven team tooling. Active builder of AI-powered systems and side projects in parallel with day work.",
     contact: [
-      // Email decision is made (jason@jasonrundle.io via Namecheap forwarding to
-      // Protonmail). Holding TBD until end-to-end verification confirms forwarded
-      // mail lands in inbox, not spam.
-      { label: "Email", href: "#", display: "TBD email" },
+      { label: "Email", href: "mailto:jason@jasonrundle.io", display: "jason@jasonrundle.io" },
       // LinkedIn and GitHub: full URLs, not bare handles.
       { label: "LinkedIn", href: "#", display: "TBD URL" },
       { label: "GitHub", href: "#", display: "TBD URL" },
@@ -154,12 +151,29 @@ export const resume: ResumeData = {
 
   projects: [
     {
-      id: "placeholder-project",
-      title: "Placeholder Project",
+      id: "latent-mind",
+      title: "Latent Mind",
       year: "2025",
       summary:
-        "One or two sentences describing a self-directed or publicly-shared project: what it is, what it solves, what is interesting about how it was built.",
-      tech: ["TypeScript", "Next.js", "Supabase"],
+        "Personal AI-powered knowledge management system with hybrid semantic search over thoughts and structured entries, streaming chat with tool use. Self-built, actively used as a thinking and reference tool.",
+      tech: ["Next.js", "Supabase", "pgvector", "OpenRouter", "TypeScript"],
+    },
+    {
+      id: "jasonrundle-io",
+      title: "jasonrundle.io",
+      href: "https://jasonrundle.io",
+      year: "2026",
+      summary:
+        "This resume site. Traditional view with downloadable PDF, with browsable projects (v2) and a conversational AI on Claude (v3) planned. Built with Claude Code as the primary development environment and shipped to Vercel. The site is itself part of the portfolio: a working artifact, not just a static page.",
+      tech: ["Next.js", "Vercel", "TypeScript"],
+    },
+    {
+      id: "simonepixel-youtube",
+      title: "@simonepixel YouTube Channel",
+      href: "https://youtube.com/@simonepixel",
+      year: "Ongoing",
+      summary:
+        "Unreal Engine tutorial channel teaching technical workflows, applying the same instructional design principles used in IT team training and KB development to a more complex technical subject.",
     },
   ],
 

@@ -68,7 +68,7 @@ export const resume: ResumeData = {
         "Trained 50+ staff on Surface Hub usage across multiple sessions using team-developed materials.",
         "Led return-to-work coordination for two organizations (SSA and Tideworks); shifted team coaching model from manual ticket review to stats-driven as scope expanded.",
       ],
-      scope: "HQ + 4 Canadian sites. Lead to 2 HQ specialists and 4 Canadian site technicians.",
+      scope: "HQ + 4 Canadian sites. Lead to 6 specialists (2 HQ, 4 Canadian).",
       tech: ["ServiceNow", "Microsoft 365", "Microsoft Copilot", "Jamf", "Teams Rooms"],
     },
     {

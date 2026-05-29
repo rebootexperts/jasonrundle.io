@@ -47,14 +47,14 @@ export const resume: ResumeData = {
 
   experiences: [
     {
-      id: "tideworks-technology",
+      id: "carrix",
       title: "Lead Technical Support Specialist, Deskside",
-      company: "Tideworks Technology",
+      company: "Carrix",
       location: "TBD",
       startDate: "2021-06",
       endDate: null,
       summary:
-        "Lead deskside support operations for Tideworks Technology (Carrix subsidiary), covering HQ and multi-site Canadian teams. Scope spans asset management, vendor relationships, ServiceNow workflow design, and AI tooling for team operations.",
+        "Lead deskside support operations within Carrix IT, covering HQ and the multi-site Canadian Tideworks Technology teams. Scope spans asset management, vendor relationships, ServiceNow workflow design, and AI tooling for team operations.",
       highlights: [
         "Lead North America for the Hardware Asset Management Phase 0/1 initiative. Authored discovery documents and led the vendor reverse-demo with the ServiceNow implementation partner. Defined the program's central objective: reliably answer who has what device organization-wide.",
         "Built a custom Microsoft Copilot agent for operational decisions, technician coaching, and communications drafting; now part of daily team workflow.",
@@ -81,6 +81,63 @@ export const resume: ResumeData = {
       endDate: "2021-06",
       summary:
         "Ran a home remodeling business in Tacoma, frequently collaborating with Puget Sound Contractor on larger projects. Continued IT consulting at reduced volume through the business.",
+      highlights: [],
+    },
+    {
+      id: "rei",
+      title: "Service Desk Analyst",
+      company: "REI",
+      location: "Kent, WA",
+      startDate: "2013-07",
+      endDate: "2017-06",
+      summary:
+        "Tier 1 IT support for 3000+ North American REI store partners plus thousands of non-retail end-users.",
+      highlights: [
+        "Trained the entire department on Mac support after earning Apple Certified Macintosh Technician certification, developing the training materials used for ongoing team onboarding.",
+      ],
+    },
+    {
+      id: "starbucks",
+      title: "Enterprise Help Desk Analyst",
+      company: "Starbucks",
+      location: "Seattle, WA",
+      startDate: "2010-03",
+      endDate: "2013-05",
+      summary:
+        "Tier 1 IT support for 3000+ North American and UK Starbucks store partners.",
+      highlights: [
+        "Created and maintained knowledge base articles that became reference material for the broader Enterprise Help Desk team.",
+      ],
+    },
+    {
+      id: "best-buy-geek-squad",
+      title: "Counter Intelligence Agent",
+      company: "Best Buy Geek Squad",
+      startDate: "2009-09",
+      endDate: "2010-03",
+      summary: "Customer-facing PC and Mac support at retail.",
+      highlights: [],
+    },
+    {
+      id: "wsac",
+      title: "IT Specialist 2",
+      company: "Washington State Arts Commission",
+      location: "Olympia, WA",
+      startDate: "2002",
+      endDate: "2003",
+      summary:
+        "Sole IT for the agency; authored its first IT Portfolio and Disaster Recovery Plan in collaboration with the Washington Department of Information Services.",
+      highlights: [],
+    },
+    {
+      id: "net36",
+      title: "Network Technician, Advanced Product Development",
+      company: "Net36",
+      location: "Ellenwood, GA",
+      startDate: "2000",
+      endDate: "2001",
+      summary:
+        "Advanced product development unit of PanAmSat (Hughes Corporation subsidiary). Integration and testing of Ethernet and fiber-optic server nodes for satellite-based streaming media content distribution; created training materials and trained NOC staff on remote server administration.",
       highlights: [],
     },
     {

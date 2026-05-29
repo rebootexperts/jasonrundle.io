@@ -1,5 +1,66 @@
 # Revision History
 
+## 2026-05-28, real content drop and PDF compression
+
+### What changed
+
+`src/data/resume.ts` now carries real content end-to-end. Placeholder content is gone.
+
+**Profile**
+- Headline: "Lead Technical Support Specialist · IT Operations · AI Tooling for Team Workflows"
+- Summary: 3 sentences covering 25+ years scope (enterprise help desk, deskside leadership, small-business consulting), current Carrix role, and the active AI-builder thread alongside day work.
+- Email: `jason@jasonrundle.io` (DNS verified, Namecheap forwarding to Protonmail confirmed end-to-end).
+- LinkedIn and GitHub still TBD pending Jason's confirmation.
+- Location still TBD pending Tacoma/Seattle confirmation.
+
+**Experience** (8 entries, start-date-descending):
+1. Carrix, Lead Technical Support Specialist, Deskside (Jun 2021 – present). Centerpiece, 12 bullets. Originally framed as Tideworks; updated to Carrix after the IT department's reorg into Carrix IT made Jason a Carrix employee. Tideworks Technology still surfaces in the summary as searchable context for the supported business.
+2. Sound Remodeling, Owner/Operator (Nov 2019 – Jun 2021), Tacoma WA. Summary only.
+3. REI, Service Desk Analyst (Jul 2013 – Jun 2017), Kent WA. 1 bullet on the Mac-training-and-ACMT differentiator.
+4. Starbucks, Enterprise Help Desk Analyst (Mar 2010 – May 2013), Seattle WA. 1 bullet on the KB-articles-as-team-reference differentiator.
+5. Best Buy Geek Squad, Counter Intelligence Agent (Sep 2009 – Mar 2010). Single-line summary, no location.
+6. Washington State Arts Commission, IT Specialist 2 (2002 – 2003), Olympia WA. Single-line summary including the IT Portfolio and DR Plan collaboration with WA Department of Information Services.
+7. Net36, Network Technician (Advanced Product Development) (2000 – 2001), Ellenwood GA. PanAmSat / Hughes Corporation context in summary. Satellite streaming media node integration and NOC training.
+8. Run Films, Owner/Operator (Jan 1998 – Nov 2019). 21-year parallel IT and AV consulting business, anchoring the bottom of the experience list as the longest-running thread.
+
+**Projects** (3 entries; Punk Flow dropped from the initial plan):
+1. Latent Mind (2025). Personal AI-powered knowledge management with hybrid semantic search and streaming chat. Tech rail: Next.js, Supabase, pgvector, OpenRouter, TypeScript.
+2. jasonrundle.io (2026). This resume site. PDF download, v2 and v3 planned. Built with Claude Code, shipped on Vercel.
+3. @simonepixel YouTube Channel (Ongoing). Unreal Engine tutorials, instructional design crossover.
+
+**Certifications** (2): ITIL Certified (2025), Apple Certified Macintosh Technician (2013).
+
+**Education** (1): "Experience-based. 25+ years in IT across enterprise, retail, public sector, and independent consulting." Honest framing, no apologetics.
+
+**Skills** (8 categories): Endpoint and Device Management, Service Management, Productivity and Collaboration, Identity and Access, Operating Systems, Hardware, AI and Automation, Documentation. Item casing preserved verbatim from the brief (proper nouns capitalized, generic methodologies lowercase). Slack admin, Bash, and Python are gaps and stay off the resume rather than padding it.
+
+### PDF compression
+
+PDF was rendering at 5 pages after the content drop. Compressed to fit the brief's 2-page target.
+
+- Page margins: 56/64 → 28/36 points (top/bottom and horizontal). Roughly half-inch margins now, standard for dense CV layouts.
+- Body font: 10 → 8.5pt. Above the readability floor for printed CVs; matches the "density over breathing room" rule.
+- Name: 24 → 16pt. Headline: 12 → 9pt. Section headings: 8 → 7pt. Meta text: 7.5 → 6.5pt.
+- Line heights: 1.55 → 1.35 across body content. Tighter vertical rhythm.
+- Entry spacing: 16 → 6pt between entries. Section heading margins: 24/10 → 10/5.
+- Meta column: 104 → 90pt width.
+
+PDF and web now diverge in density: web stays breathing-room-friendly, PDF goes dense for print. Visual identity holds across both: burnt sienna accent on section labels and bullet dots, mono treatment on dates/scope/tech in the right rail, sans-serif body.
+
+### Why
+
+Content drop was the gating moment. PDF visual restructuring was deliberately deferred until content was locked, since spacing decisions only make sense against real content. Once the content landed, the PDF length problem was visible and the compression pass was the next move.
+
+### Not done
+
+- Location confirmation: profile (Tacoma vs. Seattle) and the Carrix entry location.
+- LinkedIn and GitHub URLs.
+- Visual review of the deployed PDF for any layout issues that didn't show in the local generation.
+- @simonepixel link: defaulted to the YouTube URL, awaiting Jason's confirmation.
+- Punk Flow: deferred until Jason has a description ready.
+
+---
+
 ## 2026-05-28, content and privacy guidelines for resume content
 
 ### What changed
